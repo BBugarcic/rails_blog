@@ -1,0 +1,19 @@
+@mixin sidebar_to_top_sm_screens {
+  @media (max-width: $tablet_width) {
+      height: auto;
+  }
+}
+
+@mixin list_inline_sm_screen {
+  @media (max-width: $tablet_width) {
+    display: inline;
+    margin: 3px;
+    padding: 3px;
+  }
+}
+
+@mixin sidebar_border_change {
+  @media (min-width: $tablet_width) {
+    border-right: $thin_border;
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RailsBlogExample</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header class="container-fluid text-center blog-header">
+      <h1>My blog example</h1>
+  </header>
+
+  <div class="contianer-fluid page-content">
+    <div class="row">
+      <aside class="col-sm-3 col-xs-12  text-center sidebar">
+        <ul>
+          <li><%= link_to "posts", root_path %></li>
+          <li><a>about</a></li>
+          <li><a>contact</a></li>
+          <li><%= link_to 'New Post', new_post_path %></li>
+        </ul>
+      </aside>
+
+<%= yield %>
+
+</body>
+</html>

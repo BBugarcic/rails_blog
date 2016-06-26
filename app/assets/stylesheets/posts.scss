@@ -1,0 +1,46 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "helpers/variables.scss";
+@import "helpers/placeholders.scss";
+@import "helpers/mixins.scss";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+.page-content {
+  height: 100%;
+}
+.blog-header {
+  border-bottom: $thin_border;
+}
+
+.row {
+  height: 100%;
+  @include sidebar_to_top_sm_screens;
+}
+
+.sidebar {
+  min-height: 100%;
+  padding-top: 50px;
+  @include sidebar_border_change;
+}
+
+ul {
+  padding: 0 !important;
+  list-style-type: none;
+  li {
+    @include list_inline_sm_screen;
+    margin: 10px;
+    padding: 10px;
+  }
+}
+
+.post-body {
+  text-align: justify;
+}
